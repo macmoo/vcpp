@@ -21,3 +21,5 @@ Scenes/
 *.psess
 .vscode/
 *.json
+*.exe
+.exe/
