@@ -19,7 +19,7 @@ int main()
 	char str_5[10] = "222";
 	strcat_s(str_4, str_5);
 	cout << str_4 << endl;
-	
+
 	cout << endl;
 
 
