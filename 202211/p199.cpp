@@ -8,5 +8,5 @@ int main()
 	for(int i = 0 ; str[i] != '\0' ; ++i )
 	{
 		cout << (int)(unsigned char)str[i] << '\n';
-	}	
+	}
 }
