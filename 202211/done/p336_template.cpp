@@ -33,4 +33,4 @@ int main()
 // void print(int a, int b) 일 경우
 // 3 :: a=(int)1, b(double)=2
 // 2 :: a=1, b(double)=2
-// 2 :: a=1, b(double)=2
+// 2 :: a=1, b(dou`ble)=2

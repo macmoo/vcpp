@@ -18,3 +18,6 @@ int main()
     p=&d;
     cout << *static_cast<double*>(p) << endl;
 }
+// a
+// 10
+// 1.23
