@@ -1,7 +1,6 @@
 #include <iostream>
 #include <typeinfo>
 
-// using namespace std;
 // ----------------------------------------
 class Cls1
 {
@@ -44,15 +43,15 @@ int main()
 
     p = &val_1;
     if(typeid(*p) == typeid(Cls2))
-        std::cout << "Cls2ÀÇ °´Ã¼\n";
+        std::cout << "Cls2ï¿½ï¿½ ï¿½ï¿½Ã¼\n";
     else
-        std::cout << "Cls3ÀÇ °´Ã¼\n";
+        std::cout << "Cls3ï¿½ï¿½ ï¿½ï¿½Ã¼\n";
 
     p = &val_2;
     if(typeid(*p) == typeid(Cls2))
-        std::cout << "Cls2ÀÇ °´Ã¼\n";
+        std::cout << "Cls2ï¿½ï¿½ ï¿½ï¿½Ã¼\n";
     else
-        std::cout << "Cls3ÀÇ °´Ã¼\n";
+        std::cout << "Cls3ï¿½ï¿½ ï¿½ï¿½Ã¼\n";
 }
-// Cls2ÀÇ °´Ã¼
-// Cls3ÀÇ °´Ã¼
+// Cls2ï¿½ï¿½ ï¿½ï¿½Ã¼
+// Cls3ï¿½ï¿½ ï¿½ï¿½Ã¼
