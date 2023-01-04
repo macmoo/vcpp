@@ -15,7 +15,7 @@ public:
         val1 = p1;
         val2 = p2;
     }
-    friend class Cls2; // FRIENDí´ë˜ìŠ¤
+    friend class Cls2; // FRIEND?´?˜?Š¤
 };
 // ----------------------------------------
 class Cls2
@@ -36,14 +36,17 @@ public:
     Cls3(int v){n=v;}
     int getN(){return n;}
     void memF(){cout << "MEMBER -> n:" << n << endl;}
-    friend void friendF(Cls3 c){cout << "Friend -> c.n :" << c.n << endl;}
-
+    friend void friendF(Cls3 c);
 };
 // ----------------------------------------
 void normalF(Cls3 c)
 {
-    // cout << "Normal -> c.n:" << c.n << endl; // access ë¶ˆê°€
+    // cout << "Normal -> c.n:" << c.n << endl; // access ë¶ˆê??
     cout << "Normal -> c.getN():" << c.getN() << endl;
+}
+void friendF(Cls3 c)
+{
+    cout << "Friend -> c.n :" << c.n << endl;
 }
 // ----------------------------------------
 int main()
@@ -55,7 +58,7 @@ int main()
     Cls2 c2;
     c2.disp(c1);
     std::cout << "----------------------------------------\n";
-    // cout << c1.val3 << endl; // access ë¶ˆê°€
+    // cout << c1.val3 << endl; // access ë¶ˆê??
     cout << c1.val4 << endl;
     std::cout << "----------------------------------------\n";
     Cls3 c3(500);
