@@ -1,5 +1,6 @@
 .vs
 .git
+build/
 Debug/
 *.vcxproj
 *.vcxproj.*
@@ -18,3 +19,7 @@ Scenes/
 *.suo
 *.sdf
 *.psess
+.vscode/
+*.json
+*.exe
+.exe/
