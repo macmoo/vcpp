@@ -7,3 +7,5 @@
 
 # 단축키
 * https://learn.microsoft.com/ko-kr/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2022
+* https://jhnyang.tistory.com/323
+* 
