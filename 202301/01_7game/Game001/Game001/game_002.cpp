@@ -1,4 +1,7 @@
 // ************************************************************
+// * 참조
+//   https://beltoforion.de/en/game_of_life/
+// ************************************************************
 // [1] 헤더
 #include <stdio.h>	// 표준 입출력
 #include <stdlib.h> // 표준 라이브러리 system("cls")
@@ -7,8 +10,8 @@
 #include <time.h>	// 시간 관리 clock()
 // ************************************************************
 // [2] 정수 정의
-#define FIELD_WIDTH		(12)
-#define FIELD_HEIGHT	(12)
+#define FIELD_WIDTH		(160)
+#define FIELD_HEIGHT	(160)
 #define FPS				(10)		// 1초당 개신횟수
 #define INTERVAL		(1000/FPS)	// 갱신 간격(미리초)
 // ************************************************************
@@ -16,9 +19,9 @@
 // [3-1] 필드 선언
 bool field[FIELD_HEIGHT][FIELD_WIDTH] =
 {
-	{0,1,0},
-	{0,0,1},
-	{1,1,1},
+	//{0,1,0},
+	//{0,0,1},
+	//{1,1,1},
 };
 // ************************************************************
 // [4] 함수 선언
@@ -133,8 +136,50 @@ void stepSimulation()
 
 }
 // ------------------------------
+// [4-4] 패턴을 필드에 복사하는 함수
+void patternTransfer(int _destX, int _destY, int _srcWidth, int _srcHeight, bool* _nPattern)
+{
+	// [4-4-1] 패턴내의 모든 행 반복
+	for (int y = 0; y < _srcHeight; y++)
+	{
+		// [4-4-2] 패턴내의 모든 열 반복
+		for (int x = 0; x < _srcWidth; x++)
+		{
+			// [4-4-3] 패턴을 필드에 복사함
+			field[_destY + y][_destX + x] = _nPattern[y*_srcWidth+x];
+		}
+	}
+	// [4-4-]
+	// [4-4-]
+}
+
+// ------------------------------
 int main()
 {
+	// [4-5-1] 패턴의 폭
+	const int patternWidth	= 10;
+	// [4-5-2] 패턴의 높이
+	const int patternHeight	= 8;
+	// [4-5-3] 패턴선언
+	bool pattern[patternHeight][patternWidth] = 
+	{
+		{0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,1,0,0},
+		{0,0,0,0,0,1,0,1,1,0},
+		{0,0,0,0,0,1,0,1,0,0},
+		{0,0,0,0,0,1,0,0,0,0},
+		{0,0,0,1,0,0,0,0,0,0},
+		{0,1,0,1,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0}
+	};
+	// [4-5-4] 패턴을 필드의 중심으로 복사
+	patternTransfer(
+		FIELD_WIDTH  / 2 - patternWidth  / 2,
+		FIELD_HEIGHT / 2 - patternHeight / 2,
+		patternWidth,
+		patternHeight,
+		(bool*)pattern);
+
 	// [4-5-5] 이전의 경과 시간을 선언
 	clock_t lastClock = clock();
 	
