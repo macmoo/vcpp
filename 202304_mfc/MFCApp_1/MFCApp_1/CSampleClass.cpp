@@ -1,5 +1,5 @@
 ﻿// CSampleClass.cpp: 구현 파일
-//
+//6
 
 #include "pch.h"
 #include "MFCApp_1.h"
