@@ -10,6 +10,7 @@ public:
 	// 샘플 메소드
 	void SampleMethod(int arg1, char arg2);
 	int iSample;
+	CString AddString(LPCTSTR arg1, CString& arg2);
 };
 
 

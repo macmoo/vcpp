@@ -103,8 +103,29 @@ BOOL CMFCApp1Dlg::OnInitDialog()
 	// TODO: 여기에 추가 초기화 작업을 추가합니다.
 	CSampleClass cSample;
 	cSample.SampleMethod(0,'a');
+
+	CString cSample2(_T("abcdefg Visual C++"));
+	TRACE("%S\n", cSample2);
+	
+	cSample2.Insert(0, _T("1"));
+	TRACE("%S\n", cSample2);
+
+	cSample2.Delete(2,3);
+	TRACE("%S\n", cSample2);
+	TRACE("%d\n", cSample2.GetLength());
+	TRACE("%d\n", sizeof(TCHAR));
+	TRACE("%d\n", cSample2.GetLength() * sizeof(TCHAR));
+
+	CString a1(_T("AAAAA"));
+	CString a2(_T("BBBBB"));
+	CString test = cSample.AddString(a1,a2);
+	TRACE("a1:%S\n",a1);
+	TRACE("a2:%S\n", a2);
+	TRACE("test:%S\n", test);
+
 	return TRUE;  // 포커스를 컨트롤에 설정하지 않으면 TRUE를 반환합니다.
 }
+
 
 void CMFCApp1Dlg::OnSysCommand(UINT nID, LPARAM lParam)
 {

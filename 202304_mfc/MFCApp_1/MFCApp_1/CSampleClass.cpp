@@ -25,5 +25,15 @@ CSampleClass::~CSampleClass()
 void CSampleClass::SampleMethod(int arg1, char arg2)
 {
 	// TODO: 여기에 구현 코드 추가.
-	int div = 1000 / arg1;
+	// int div = 1000 / arg1;
+}
+
+
+CString CSampleClass::AddString(LPCTSTR arg1, CString& arg2)
+{
+	// TODO: 여기에 구현 코드 추가.
+	CString result = arg1 + arg2;
+	arg1 = result;
+	arg2 = result;
+	return result;
 }
