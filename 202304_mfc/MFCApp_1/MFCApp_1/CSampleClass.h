@@ -11,6 +11,10 @@ public:
 	void SampleMethod(int arg1, char arg2);
 	int iSample;
 	CString AddString(LPCTSTR arg1, CString& arg2);
+	void TestProcFile();
+	void TestFileRead();
+	void TestTime();
+	void TestTimeCompare();
 };
 
 
